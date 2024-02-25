@@ -50,7 +50,7 @@
 
   <div class="container">
     <main class="search-container">
-      <form action="results.php" method="get">
+      <form action="results.php" method="get" id="home-search">
         <div class="main-search">
           <input type="text" name="phone" id="search" placeholder="Enter Mobile Phone name ..." />
           <button type="submit">Search</button>
@@ -66,8 +66,8 @@
         <div class="advanced-options">
 
           <div class="search-filer">
-            <label for="brand">Search by Brand:</label>
-            <select name="brand" id="brand">
+            <label for="SF-brand">Search by Brand:</label>
+            <select name="brand" id="SF-brand">
               <option value="all">All</option>
               <option value="samsung">Samsung</option>
               <option value="apple">Apple</option>

@@ -3,15 +3,12 @@ const rangeInput = document.querySelectorAll(".range-input input"),
   range = document.querySelector(".slider .progress");
 let priceGap = 1000;
 
+const mainForm = document.querySelector("#home-search");
+
 priceInput.forEach((input) => {
   input.addEventListener("input", (e) => {
     let minPrice = parseInt(priceInput[0].value),
       maxPrice = parseInt(priceInput[1].value);
-
-    if(maxPrice <= minPrice){
-        alert("maximum price must be greater than minimum price");
-        
-    }
 
     if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
       if (e.target.className === "input-min") {
@@ -44,3 +41,17 @@ rangeInput.forEach((input) => {
     }
   });
 });
+
+mainForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let minPrice = parseInt(priceInput[0].value),
+    maxPrice = parseInt(priceInput[1].value);
+
+    if(maxPrice <= minPrice){
+        alert("max price cannot be less than min price");
+        return false;
+    }else{
+        mainForm.submit();
+    }
+})
