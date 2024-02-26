@@ -1,4 +1,3 @@
-
 /* navigation */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -32,7 +31,7 @@ body {
 .site-header {
     --header-margin: 5vh;
     margin-block: auto;
-    
+
     min-block-size: 3.5rem;
     /* background-color: #fff; */
     /* outline: 1px solid hsl(195, 16%, 82%); */
@@ -47,7 +46,7 @@ body {
     gap: 0 clamp(2.5rem, -65.14rem + 61.43vw, 20rem);
 }
 
-.header__content--flow > * {
+.header__content--flow>* {
     flex-grow: 1;
     height: 3.5rem;
     width: calc((45rem - 100% - (1rem * 2)) * 999);
@@ -220,9 +219,10 @@ body {
 }
 
 @media (max-width: 479px) {
-    .header-content--left > * {
+    .header-content--left>* {
         scale: 0.83;
     }
+
     .nav__list {
         width: calc(100% - 2rem);
     }
@@ -231,13 +231,13 @@ body {
 
 /* home page */
 
-.container{
+.container {
     width: 90%;
     margin: 0 auto;
-    max-width:  1400px;
+    max-width: 1400px;
 }
 
-.search-container{
+.search-container {
     margin-inline: auto;
     margin-top: 180px;
     width: 90%;
@@ -245,12 +245,12 @@ body {
     /* background: #666; */
 }
 
-.main-search{
+.main-search {
     width: 100%;
     display: flex;
 }
 
-.main-search > input{
+.main-search>input {
     width: 100%;
     padding: 20px 30px;
     border-radius: 8px 0 0 8px;
@@ -263,12 +263,12 @@ body {
 
 #search::-moz-placeholder,
 #search::placeholder,
-#search::-webkit-input-placeholder{
+#search::-webkit-input-placeholder {
     color: white;
 }
 
 
-.main-search > button{
+.main-search>button {
     padding: 20px 30px;
     border-radius: 0 8px 8px 0;
     border: none;
@@ -279,12 +279,12 @@ body {
     color: white;
 }
 
-.main-search > button:hover,
-.main-search > button:focus{
+.main-search>button:hover,
+.main-search>button:focus {
     background: #002a7c;
 }
 
-button.advanced-search{
+button.advanced-search {
     padding: 10px 10px;
     background: unset;
     border: unset;
@@ -296,11 +296,11 @@ button.advanced-search{
     transition: transform 200ms ease;
 }
 
-.advanced-search > .a-s-i.active{
+.advanced-search>.a-s-i.active {
     transform: rotate(180deg);
 }
 
-.advanced-options{
+.advanced-options {
     font-style: inherit;
     font-size: 0.9rem;
     padding: 10px;
@@ -310,21 +310,21 @@ button.advanced-search{
     transition: transform 200ms ease;
 }
 
-.advanced-options.active{
+.advanced-options.active {
     transform: scaleY(1);
 }
 
-.price-input{
+.price-input {
     margin-top: 20px !important;
 }
 
-#SF-brand{
+#SF-brand {
     padding: 5px;
 }
 
 /* result page */
 
-.result-header{
+.result-header {
     background-image: url(../images/result-backgraound.jpg);
     background-size: cover;
     background-position: center center;
@@ -332,13 +332,137 @@ button.advanced-search{
     padding-bottom: 20px;
 }
 
-.result-header > .container-nav{
+.result-header>.container-nav {
     margin-bottom: 40px;
 }
 
-.results-readline{
+.results-readline {
     font-size: 1rem;
     font-weight: 400;
 }
 
+.search-area {
+    margin-bottom: 30px;
+}
 
+.search-area>form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.search-area>form>input {
+    max-width: 400px;
+    width: 50%;
+    padding: 10px 20px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #B4CAF5;
+}
+
+.search-area>form>button {
+    padding: 10px 20px;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #0056FD;
+    cursor: pointer;
+    color: white;
+}
+
+.results-count {
+    font-size: 0.8rem;
+}
+
+.search-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+
+.filter-card {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #B4CAF5;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+
+}
+
+.filter-card > p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.result-container{
+    background-color: #666;
+}
+
+.filter-card > div{
+    margin-bottom: 10px;
+}
+
+.filter-card label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-card select{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.filter-price > table {
+    width: 100%;
+    
+}
+
+.filter-price > table tr {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-price > table > tr > td:first-child {
+    width: 30%;
+}
+
+.filter-price > table > tr > td:last-child {
+    width: 70%;
+}
+
+.filter-price > table input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+
+}
+
+.filter-card > button[type="submit"] {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #0056FD;
+    cursor: pointer;
+    color: white;
+}
