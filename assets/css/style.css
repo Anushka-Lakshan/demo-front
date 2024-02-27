@@ -337,8 +337,8 @@ button.advanced-search {
 }
 
 .results-readline {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .search-area {
@@ -402,9 +402,7 @@ button.advanced-search {
     margin-bottom: 15px;
 }
 
-.result-container{
-    background-color: #666;
-}
+
 
 .filter-card > div{
     margin-bottom: 10px;
@@ -465,4 +463,84 @@ button.advanced-search {
     background: #0056FD;
     cursor: pointer;
     color: white;
+}
+
+.result-container{
+    padding: 0px 10px;
+}
+
+.result-card{
+    padding: 20px 30px;
+    background-color: #B4CAF5;
+    border-radius: 12px;
+}
+
+.result-card > .card-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.result-card > .card-top > .shop{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.result-card > .card-top > .shop > img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+    border: 2px solid #0056FD;
+}
+
+.item-table{
+    width: 100%;
+}
+
+.item-table tr{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.item-table td:nth-of-type(1){
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.item-table td:nth-of-type(2){
+    width: 70%;
+}
+
+.item-table td:nth-of-type(3){
+    width: 20%;
+    justify-self: right;
+    text-align: right;
+}
+
+.item-table td:nth-of-type(1) > img{
+    width: 50px;
+}
+
+.item-table td:nth-of-type(2) > a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.stock-badge{
+    display: inline-block;
+    margin-left: 20px;
+    background-color: #f84848;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
 }
