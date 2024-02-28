@@ -71,6 +71,13 @@
   </div>
 
   <main class="container search-content">
+
+    <div class="filter-container">
+
+      <button id="toggleButton" class="">Filter</button>
+
+      
+
     <form action="result.php" method="get" class="filter-card">
       <p>Filter options</p>
 
@@ -125,8 +132,106 @@
       <button type="submit">Filter</button>
     </form>
 
+    <script>
+      const toggleButton = document.getElementById("toggleButton");
+      const form = document.querySelector("form.filter-card");
+
+      toggleButton.addEventListener("click", () => {
+          if (window.innerWidth < 950) {
+              form.classList.toggle("hidden");
+          }
+      });
+      </script>
+
+    </div>
+
+
     <!-- search results start -->
     <div class="result-container">
+
+      <div class="result-card">
+        <div class="card-top">
+          <div class="shop">
+            <img src="./assets/images/company-logos/geniusMobile.png" alt="geniusMobile">
+            <span>Genius Mobile</span>
+          </div>
+
+          <div class="item-count">
+            6 mobiles
+          </div>
+        </div>
+
+        <div class="card-bottom">
+          <table class="item-table">
+            <tr>
+              <td>
+                <img src="./assets/images/mobile-images/itest.jpg" alt="samsung-galaxy-s22-ultra">
+              </td>
+              <td>
+                <a href="#">Samsung Galaxy S22 Ultra</a><span class="stock-badge">Out of stock</span>
+              </td>
+              <td>
+                Rs.204,990.63
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <img src="./assets/images/mobile-images/itest.jpg" alt="samsung-galaxy-s22-ultra">
+              </td>
+              <td>
+                <a href="#">Samsung Galaxy S22 Ultra</a>
+              </td>
+              <td>
+                Rs.204,990.63
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+
+      <div class="result-card">
+        <div class="card-top">
+          <div class="shop">
+            <img src="./assets/images/company-logos/geniusMobile.png" alt="geniusMobile">
+            <span>Genius Mobile</span>
+          </div>
+
+          <div class="item-count">
+            6 mobiles
+          </div>
+        </div>
+
+        <div class="card-bottom">
+          <table class="item-table">
+            <tr>
+              <td>
+                <img src="./assets/images/mobile-images/itest.jpg" alt="samsung-galaxy-s22-ultra">
+              </td>
+              <td>
+                <a href="#">Samsung Galaxy S22 Ultra</a><span class="stock-badge">Out of stock</span>
+              </td>
+              <td>
+                Rs.204,990.63
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <img src="./assets/images/mobile-images/itest.jpg" alt="samsung-galaxy-s22-ultra">
+              </td>
+              <td>
+                <a href="#">Samsung Galaxy S22 Ultra</a>
+              </td>
+              <td>
+                Rs.204,990.63
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
 
       <div class="result-card">
         <div class="card-top">
